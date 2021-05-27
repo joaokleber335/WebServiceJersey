@@ -10,29 +10,28 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import br.edu.unidep.webservice.model.dominio.Produto;
-import br.edu.unidep.webservice.service.ProdutoService;
+import br.edu.unidep.webservice.model.dominio.Pessoa;
+import br.edu.unidep.webservice.service.PessoaService;
 
 @Consumes(MediaType.APPLICATION_JSON + ";charset=utf-8")
 @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
-@Path("/produtos")
-public class ProdutoREST {
+@Path("/pessoas")
+public class PessoaREST {
 
-	private ProdutoService service = new ProdutoService();
+	private PessoaService service = new PessoaService();
 
 	@GET
-	public List<Produto> listar() throws Exception {
+	public List<Pessoa> listar() throws Exception {
 		return service.listar();
 	}
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response cadastrar(Produto obj) {
+	public Response cadastrar(Pessoa obj) {
 		try {
 			System.out.println(obj.toString());
 			obj = service.cadastrar(obj);
@@ -43,9 +42,9 @@ public class ProdutoREST {
 	}
 	
 	@PUT 
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON) 
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response atualizar(Produto obj) {
+	public Response atualizar(Pessoa obj) {
 		try {
 			obj = service.atualizar(obj);
 			return Response.ok(obj).build();

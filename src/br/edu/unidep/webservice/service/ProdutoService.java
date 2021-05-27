@@ -20,5 +20,18 @@ public class ProdutoService {
 		}
 		return null;
 	}
+	
+	public Produto atualizar(Produto obj) throws Exception {
+		Produto produto = dao.atualizar(obj);
+		if (produto != null) {
+			return produto;
+		}
+		return null;
+	}
+	
+	public Integer remover(Integer id) throws Exception {
+		dao.remover(id);
+		return id;
+	}
 
 }
