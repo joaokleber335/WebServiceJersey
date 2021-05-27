@@ -14,17 +14,17 @@ public class PessoaService {
 	}
 
 	public Pessoa cadastrar(Pessoa obj) throws Exception {
-		Pessoa produto = dao.cadastrar(obj);
-		if (produto != null) {
-			return produto;
+		Pessoa pessoa = dao.cadastrar(obj);
+		if (pessoa != null) {
+			return pessoa;
 		}
 		return null;
 	}
 	
 	public Pessoa atualizar(Pessoa obj) throws Exception {
-		Pessoa produto = dao.atualizar(obj);
-		if (produto != null) {
-			return produto;
+		Pessoa pessoa = dao.atualizar(obj);
+		if (pessoa != null) {
+			return pessoa;
 		}
 		return null;
 	}

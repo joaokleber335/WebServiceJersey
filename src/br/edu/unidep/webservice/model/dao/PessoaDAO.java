@@ -13,7 +13,7 @@ public class PessoaDAO extends AbstractDAO<Pessoa> {
 
 	@Override
 	public List<Pessoa> listar() {
-		return em.createQuery("select p from pessoa p", Pessoa.class).getResultList();
+		return em.createQuery("select p from Pessoa p", Pessoa.class).getResultList();
 	}
 
 }
