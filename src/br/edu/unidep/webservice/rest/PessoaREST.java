@@ -33,7 +33,6 @@ public class PessoaREST {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response cadastrar(Pessoa obj) {
 		try {
-			System.out.println(obj.toString());
 			obj = service.cadastrar(obj);
 			return Response.ok(obj).build();
 		} catch (Exception e) {

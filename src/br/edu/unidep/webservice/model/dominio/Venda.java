@@ -56,6 +56,13 @@ public class Venda {
 		return valorVenda;
 	}
 	
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+	
 	public void cancelar() {
 		this.tipoVenda = 'C';
 	}

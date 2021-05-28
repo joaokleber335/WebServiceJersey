@@ -21,13 +21,9 @@ public class VendaService {
 		return null;
 	}
 	
-	public Venda cancelar(Venda obj) throws Exception {
-		obj.cancelar();
-		Venda venda = dao.atualizar(obj);
-		if (venda != null) {
-			return venda;
-		}
-		return null;
+	public void cancelar(Venda obj) throws Exception {
+		dao.cancelar(obj.getId());
+		return;
 	}
 
 }

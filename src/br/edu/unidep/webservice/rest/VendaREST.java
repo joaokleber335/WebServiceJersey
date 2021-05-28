@@ -45,8 +45,8 @@ public class VendaREST {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response atualizar(Venda obj) {
 		try {
-			obj = service.cancelar(obj);
-			return Response.ok(obj).build();
+			service.cancelar(obj);
+			return Response.ok("ok").build();
 		} catch (Exception e) {
 			return Response.serverError().entity(e.getLocalizedMessage()).build();
 		}
