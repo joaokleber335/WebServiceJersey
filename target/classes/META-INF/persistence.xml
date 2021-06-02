@@ -7,6 +7,8 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		
 		<class>br.edu.unidep.webservice.model.dominio.Produto</class>
+		<class>br.edu.unidep.webservice.model.dominio.Pessoa</class>
+		<class>br.edu.unidep.webservice.model.dominio.Venda</class>
 		
 		<!-- Propriedades de conexão com o Banco de Dados -->
 		<properties>

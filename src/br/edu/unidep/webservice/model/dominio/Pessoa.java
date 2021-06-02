@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "Pessoa")
+@Table(name = "pessoa")
 public class Pessoa {
 
 	
